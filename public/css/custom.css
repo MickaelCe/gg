@@ -1,0 +1,157 @@
+:root {
+    --action: #FB8122;
+    --secondary: #fb80229c;
+  }
+
+
+body{
+    background-image: url("../images/bg_mobile.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.content-wrapper, footer{
+    background-color: #212025 !important;
+}
+
+.profil{
+    grid-area: 1/2/4/4;
+    align-self: center;
+}
+
+[class*=sidebar-dark] .user-panel, [class*=sidebar-dark] .brand-link {
+    border-bottom: 1px solid var(--action);
+}
+
+.inputsearch{
+    background-color: #21202577;
+    border: solid 2px var(--action);
+}
+
+.imgsearch{
+    border-radius: 10px;
+    width: 100%;
+}
+
+.content{
+    background-color: #212025;
+    display: grid;
+    grid-template-columns: 10px 1fr 1fr 10px;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-rows: 145px 228px 145px 100px;
+    grid-template-areas: 
+            ". l4d l4d ."
+            ". ark re ."
+            ". nier nier ."
+            ". b4b b4b .";
+}
+
+#l4d{
+    grid-area: l4d;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+#ARK{
+    grid-area: ark;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+#re{
+    grid-area: re;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+#nier{
+    grid-area: nier;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+#b4b{
+    grid-area: b4b;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+.main-header{
+    background-color: #212025;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 20px;
+    grid-template-areas: 
+            "menu menu menu menu menuend";
+}
+
+.logofull{
+    grid-area: menu;
+}
+
+.navbar-nav{
+    grid-area: menuend;
+    justify-self: flex-end;
+}
+
+.userinfo{
+    grid-area: menu;
+}
+
+/* color */
+.action{
+    color:var(--action);
+}
+
+.secondary{
+    color:var(--secondary);
+}
+
+.btn-action{
+    background-color:var(--action);
+    color: #fff;
+    font-weight: 700;
+}
+
+.btn-secondary{
+    background-color: transparent !important;
+    color: var(--action);
+    font-weight: 700;
+    border: 2px solid var(--action);
+}
+
+.login-box-msg{
+    color: #fff;
+    display: flex;
+    justify-self: flex-start;
+    padding: 0 0 20px 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.mobilelogin{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20vh 75vh 5vh;
+    grid-template-areas: 
+            "logo logo logo"
+            "login login login"
+            "footer footer footer";
+}
+
+.login-logo{
+    grid-area: logo;
+    justify-self: end;
+    padding: 0 20px 0 0;
+}
+
+.login-box{
+    grid-area: login;
+    justify-self: center;
+}
+
+.loginput{
+    border-bottom: solid 2px !important;
+}
