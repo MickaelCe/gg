@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "aos": "^2.3.4",
         "cross-env": "^7.0.3",
         "vue-infinite-loading": "^2.4.5",
         "vue-observe-visibility": "^1.0.0",

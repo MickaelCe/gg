@@ -20,7 +20,12 @@ window.Vue = require('vue').default;
 
 Vue.component('search-component', require('./components/Search.vue').default);
 
-import VueObserveVisibility from 'vue-observe-visibility'
+import VueObserveVisibility from 'vue-observe-visibility';
+
+import AOS from 'aos';
+
+import 'aos/dist/aos.css';
+
 
 Vue.use(VueObserveVisibility)
 /**
@@ -31,4 +36,7 @@ Vue.use(VueObserveVisibility)
 
 const app = new Vue({
     el: '#app',
+    created () {
+        AOS.init()
+    }
 });

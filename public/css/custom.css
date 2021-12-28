@@ -47,6 +47,12 @@ body{
             ". b4b b4b .";
 }
 
+.form-control:focus {
+    background-color: transparent !important;
+    border-color: var(--action);
+    color: var(--action);
+  }
+
 #l4d{
     grid-area: l4d;
     object-fit: cover;

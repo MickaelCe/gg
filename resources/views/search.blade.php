@@ -5,7 +5,7 @@
 
     <!-- Main content -->
     <div id="app">
-        <div class="container pt-3">
+        <div class="container py-3 overflow-hidden">
             <search-component></search-component>
         </div>
     </div>

@@ -3,7 +3,7 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="info">
-            <a href="{{ route('profile.show') }}" class="d-block text-white">Modifier mon profil : <br> {{ Auth::user()->name }}</a>
+            <a href="{{ route('profile.show') }}" class="d-block text-white">Edit profile : <br> <span class="action">{{ Auth::user()->name }}</span></a>
         </div>
     </div>
 
@@ -15,7 +15,7 @@
                 <a href="{{ route('home') }}" class="nav-link">
                     <i class="nav-icon fas fa-th action"></i>
                     <p class='text-white'>
-                        {{ __('Accueil') }}
+                        {{ __('Home') }}
                     </p>
                 </a>
             </li>
@@ -24,7 +24,7 @@
                 <a href="{{ route('search') }}" class="nav-link">
                     <i class="nav-icon fas fa-search action"></i>
                     <p class='text-white'>
-                        {{ __('Recherche') }}
+                        {{ __('Search') }}
                     </p>
                 </a>
             </li>
@@ -33,7 +33,7 @@
                 <a href="" class="nav-link">
                     <i class="nav-icon fas fa-star action"></i>
                     <p class='text-white'>
-                        {{ __('Favoris') }}
+                        {{ __('Favorites') }}
                     </p>
                 </a>
             </li>

@@ -10,6 +10,10 @@ class GameController extends Controller
 {
     public function index()
     {
-        return Game::paginate(5);
+        return Game::all();
+    }
+    public function random()
+    {
+        return Game::inRandomOrder()->get();
     }
 }

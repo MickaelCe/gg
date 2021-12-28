@@ -19,3 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::middleware('api')->get('/games', [\App\Http\Controllers\GameController::class, 'index']);
+Route::middleware('api')->get('/randomgames', [\App\Http\Controllers\GameController::class, 'random']);

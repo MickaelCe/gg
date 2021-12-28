@@ -26,7 +26,7 @@
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-ellipsis-v action"></i></a>
             </li>
         </ul>
-        <img class="logofull" src="{{ asset('images/logofull.png') }}">
+        <a href="{{ route('home') }}"class="logofull"><img class="logofull" src="{{ asset('images/logofull.png') }}"></a>
 
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto userinfo">
@@ -60,7 +60,7 @@
         <!-- Brand Logo -->
         <a href="/" class="brand-link d-flex justify-content-around">
             <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="brand-image">
-            <span class="brand-text font-weight-bold text-white">Gamer Gate</span>
+            <span class="brand-text font-weight-bold text-white"><span class="action">G</span>amer <span class="action">G</span>ate</span>
         </a>
 
         @include('layouts.navigation')
