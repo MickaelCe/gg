@@ -30,11 +30,11 @@ Petite application web exploitant une BDD de 49000 jeux sur steam.
 
 * Authentification et personnalisation du profil.
 
-* Section de recherches de jeux
+* Section de recherches de jeux.
 
-* Fiche détails des jeux
+* Fiche détails des jeux.
 
-* Ajout de jeux dans les favoris
+* Ajout de jeux dans les favoris.
 
 
 
