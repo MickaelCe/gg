@@ -4,7 +4,7 @@
         <div v-if="q != ''">
             <div v-for="game in getFilteredGames" v-bind:key="game.id">
                 <div class="card my-3 bg-transparent">
-                    <a href="#" data-aos="fade-left"><img :src="`${game.img_url}`" class="imgsearch" alt="Couverture du jeux" /></a>
+                <a :href="`/show/${game.id}`" data-aos="fade-left"><img :src="`${game.img_url}`" class="imgsearch" alt="Couverture du jeux" /></a>
                 </div>
             </div>
             <div v-observe-visibility="handleScrolledToBottom"></div>

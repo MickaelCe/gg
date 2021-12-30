@@ -25,4 +25,5 @@ Route::middleware('auth')->group(function () {
     Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
 
     Route::get('search', [\App\Http\Controllers\SearchController::class, 'index'])->name('search');
+    Route::get('show/{id}', [\App\Http\Controllers\GameController::class, 'show'])->name('show');
 });

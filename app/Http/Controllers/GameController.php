@@ -16,4 +16,10 @@ class GameController extends Controller
     {
         return Game::inRandomOrder()->get();
     }
+    public function show($id)
+    {
+        $game = Game::where('id', $id)->first();
+
+        return view('show', compact('game'));
+    }
 }
