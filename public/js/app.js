@@ -28451,15 +28451,24 @@ var render = function () {
             _vm._l(_vm.getRandomFilteredGames, function (randomgame) {
               return _c("div", { key: randomgame.id }, [
                 _c("div", { staticClass: "card my-3 bg-transparent" }, [
-                  _c("a", { attrs: { href: "#", "data-aos": "fade-left" } }, [
-                    _c("img", {
-                      staticClass: "imgsearch",
+                  _c(
+                    "a",
+                    {
                       attrs: {
-                        src: "" + randomgame.img_url,
-                        alt: "Couverture du jeux",
+                        href: "/show/" + randomgame.id,
+                        "data-aos": "fade-left",
                       },
-                    }),
-                  ]),
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "imgsearch",
+                        attrs: {
+                          src: "" + randomgame.img_url,
+                          alt: "Couverture du jeux",
+                        },
+                      }),
+                    ]
+                  ),
                 ]),
               ])
             }),

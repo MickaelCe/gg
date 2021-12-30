@@ -13,7 +13,7 @@
             <h4 class="text-white text-center py-4">or <span class="action">scroll</span> to find new ones</h4>
             <div v-for="randomgame in getRandomFilteredGames" v-bind:key="randomgame.id">
                 <div class="card my-3 bg-transparent">
-                    <a href="#" data-aos="fade-left"><img :src="`${randomgame.img_url}`" class="imgsearch" alt="Couverture du jeux" /></a>
+                    <a :href="`/show/${randomgame.id}`" data-aos="fade-left"><img :src="`${randomgame.img_url}`" class="imgsearch" alt="Couverture du jeux" /></a>
                 </div>
             </div>
             <div v-observe-visibility="handleScrolledToBottomRand"></div>
