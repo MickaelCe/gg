@@ -20,7 +20,7 @@
                 <div class="col-lg-6">
                     <div class="card">
 
-                        <form action="{{ route('profile.update') }}" method="POST">
+                        <form action="{{ route('profile.update') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
 
@@ -84,6 +84,13 @@
                                             <span class="fas fa-lock"></span>
                                         </div>
                                     </div>
+                                </div>
+
+
+                                <div class="input-group mb-3">
+                                    <label>{{ __('New profile picture') }}</label>
+                                    <input type="file" name="img_prfl"
+                                           class="@error('img_prfl') is-invalid @enderror">
                                 </div>
 
                             </div>

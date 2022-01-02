@@ -3,7 +3,8 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="info">
-            <a href="{{ route('profile.show') }}" class="d-block text-white">Edit profile : <br> <span class="action">{{ Auth::user()->name }}</span></a>
+            <a href="{{ route('profile.show') }}" class="d-block text-white">Edit profile : <br> <span class="action">{{ Auth::user()->name }}</span> <br>  Since {!! carbon\carbon::parse(Auth::user()->created_at)->format('d-m-y') !!}</a>
+            <img class="image" src="{{asset('/storage/'.Auth::user()->img_prfl)}}" alt="profile_image">
         </div>
     </div>
 

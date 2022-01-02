@@ -21,6 +21,7 @@ class ProfileController extends Controller
         auth()->user()->update([
             'name' => $request->name,
             'email' => $request->email,
+            'img_prfl' => $request->file('img_prfl')->storeAs('images',$request->img_prfl->getClientOriginalName(),'public'),
         ]);
 
         return redirect()->back()->with('success', 'Profile updated.');
