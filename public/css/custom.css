@@ -29,7 +29,7 @@ body{
 }
 
 .imgsearch{
-    border-radius: 10px;
+    border-radius: 5px;
     width: 100%;
 }
 
@@ -191,13 +191,14 @@ body{
     z-index: 1;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 80px 200px 100px 250px 100px;
+    grid-template-rows: 125px 150px 100px 150px 100px;
 }
 
 .gamename{
     grid-area: 1/1/2/5;
     justify-self: center;
     align-self: center;
+    object-fit: contain;
 }
 .gameimg{
     grid-area: 2/1/3/5;
@@ -227,4 +228,20 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+@media screen and (min-width: 768px)
+{
+    .searchDesk{
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 5rem;
+    }
+    .searchDeskImg{
+        width: 25%;
+        padding: 0 5px 0 5px;
+    }
+    .h4Desk{
+        display: none;
+    }
 }

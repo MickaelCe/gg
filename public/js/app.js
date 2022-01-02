@@ -5276,6 +5276,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -28401,11 +28405,12 @@ var render = function () {
     }),
     _vm._v(" "),
     _vm.q != ""
-      ? _c(
-          "div",
-          [
+      ? _c("div", { staticClass: "searchDesk" }, [
+          _c(
+            "div",
+            { staticClass: "searchDesk" },
             _vm._l(_vm.getFilteredGames, function (game) {
-              return _c("div", { key: game.id }, [
+              return _c("div", { key: game.id, staticClass: "searchDeskImg" }, [
                 _c("div", { staticClass: "card my-3 bg-transparent" }, [
                   _c(
                     "a",
@@ -28428,64 +28433,69 @@ var render = function () {
                 ]),
               ])
             }),
-            _vm._v(" "),
-            _c("div", {
-              directives: [
-                {
-                  name: "observe-visibility",
-                  rawName: "v-observe-visibility",
-                  value: _vm.handleScrolledToBottom,
-                  expression: "handleScrolledToBottom",
-                },
-              ],
-            }),
-          ],
-          2
-        )
+            0
+          ),
+          _vm._v(" "),
+          _c("div", {
+            directives: [
+              {
+                name: "observe-visibility",
+                rawName: "v-observe-visibility",
+                value: _vm.handleScrolledToBottom,
+                expression: "handleScrolledToBottom",
+              },
+            ],
+          }),
+        ])
       : _vm.q == ""
-      ? _c(
-          "div",
-          [
-            _vm._m(0),
-            _vm._v(" "),
+      ? _c("div", [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "searchDesk" },
             _vm._l(_vm.getRandomFilteredGames, function (randomgame) {
-              return _c("div", { key: randomgame.id }, [
-                _c("div", { staticClass: "card my-3 bg-transparent" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "/show/" + randomgame.id,
-                        "data-aos": "fade-left",
-                      },
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "imgsearch",
+              return _c(
+                "div",
+                { key: randomgame.id, staticClass: "searchDeskImg" },
+                [
+                  _c("div", { staticClass: "card my-3 bg-transparent" }, [
+                    _c(
+                      "a",
+                      {
                         attrs: {
-                          src: "" + randomgame.img_url,
-                          alt: "Couverture du jeux",
+                          href: "/show/" + randomgame.id,
+                          "data-aos": "fade-left",
                         },
-                      }),
-                    ]
-                  ),
-                ]),
-              ])
+                      },
+                      [
+                        _c("img", {
+                          staticClass: "imgsearch",
+                          attrs: {
+                            src: "" + randomgame.img_url,
+                            alt: "Couverture du jeux",
+                          },
+                        }),
+                      ]
+                    ),
+                  ]),
+                ]
+              )
             }),
-            _vm._v(" "),
-            _c("div", {
-              directives: [
-                {
-                  name: "observe-visibility",
-                  rawName: "v-observe-visibility",
-                  value: _vm.handleScrolledToBottomRand,
-                  expression: "handleScrolledToBottomRand",
-                },
-              ],
-            }),
-          ],
-          2
-        )
+            0
+          ),
+          _vm._v(" "),
+          _c("div", {
+            directives: [
+              {
+                name: "observe-visibility",
+                rawName: "v-observe-visibility",
+                value: _vm.handleScrolledToBottomRand,
+                expression: "handleScrolledToBottomRand",
+              },
+            ],
+          }),
+        ])
       : _vm._e(),
   ])
 }
@@ -28494,7 +28504,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("h4", { staticClass: "text-white text-center py-4" }, [
+    return _c("h4", { staticClass: "text-white text-center py-4 h4Desk" }, [
       _vm._v("or "),
       _c("span", { staticClass: "action" }, [_vm._v("scroll")]),
       _vm._v(" to find new ones"),
