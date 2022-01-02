@@ -58,24 +58,28 @@ body{
     object-fit: cover;
     width: 100%;
     max-height: 100%;
+    filter: saturate(1.2);
 }
 #ARK{
     grid-area: ark;
     object-fit: cover;
     width: 100%;
     max-height: 100%;
+    filter: saturate(1.2);
 }
 #re{
     grid-area: re;
     object-fit: cover;
     width: 100%;
     max-height: 100%;
+    filter: saturate(1.2);
 }
 #nier{
     grid-area: nier;
     object-fit: cover;
     width: 100%;
     max-height: 100%;
+    filter: saturate(1.2);
 }
 
 #b4b{
@@ -83,6 +87,7 @@ body{
     object-fit: cover;
     width: 100%;
     max-height: 100%;
+    filter: saturate(1.2);
 }
 
 .main-header{
@@ -196,7 +201,7 @@ body{
     height: 100vh;
     width: 100%;
     grid-area: 1/1/6/2;
-    filter: blur(15px) saturate(1.2);
+    filter: blur(10px) saturate(1.2);
     z-index: 0;
 }
 
@@ -231,6 +236,26 @@ body{
     border-radius: 10px;
     border: 3px solid var(--action);
 }
+
+
+.image-container {
+    position: relative;
+    }
+    
+    .mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-attachment: fixed;
+    background: rgb(0,0,0);
+    background: linear-gradient(156deg, rgba(33, 32, 37, 0.3) 4%, rgba(33, 32, 37,0.8183648459383753) 57%, rgba(33, 32, 37,1) 100%);
+    }
+
 .gamedev{
     grid-area: 3/1/4/5;
     display: flex;
