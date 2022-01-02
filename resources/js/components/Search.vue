@@ -5,7 +5,7 @@
             <div class="searchDesk">
             <div v-for="game in getFilteredGames" v-bind:key="game.id" class="searchDeskImg">
                 <div class="card my-3 bg-transparent">
-                <a :href="`/show/${game.id}`" data-aos="fade-left"><img :src="`${game.img_url}`" class="imgsearch" alt="Couverture du jeux" /></a>
+                <a :href="`/show/${game.id}`" data-aos="fade-left"><span class="badge btn-action">{{game.categories | truncate(13, '...')}}</span><img :src="`${game.img_url}`" class="imgsearch" alt="Couverture du jeux" /></a>
                 </div>
             </div>
             </div>
@@ -16,7 +16,7 @@
             <div class="searchDesk">
                 <div v-for="randomgame in getRandomFilteredGames" v-bind:key="randomgame.id" class="searchDeskImg">
                     <div class="card my-3 bg-transparent">
-                        <a :href="`/show/${randomgame.id}`" data-aos="fade-left"><img :src="`${randomgame.img_url}`" class="imgsearch" alt="Couverture du jeux" /></a>
+                        <a :href="`/show/${randomgame.id}`" data-aos="fade-left"><span class="badge btn-action">{{randomgame.categories | truncate(13, '...')}}</span><img :src="`${randomgame.img_url}`" class="imgsearch" alt="Couverture du jeux" /></a>
                     </div>
                 </div>
             </div>
@@ -38,17 +38,15 @@
             }
         },
 
+        filters: {
+        truncate: function(data,num){
+            const reqdString = 
+              data.split("").slice(0, num).join("");
+            return reqdString;
+        }
+    },
+
         methods: {
-            // fetchGames() {
-            //     axios.get(`/api/games?page=${this.page}`)
-            //     .then (response => {
-            //         this.games.push(...response.data.data);
-            //         console.log(this.page);
-            //     })
-            //     .catch (error => {
-            //         console.log(error)
-            //     })
-            // },
             fetchGames() {
                 axios.get(`/api/games`)
                 .then (response => {

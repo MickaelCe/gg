@@ -5290,17 +5290,13 @@ __webpack_require__.r(__webpack_exports__);
       pagerandom: 5
     };
   },
+  filters: {
+    truncate: function truncate(data, num) {
+      var reqdString = data.split("").slice(0, num).join("");
+      return reqdString;
+    }
+  },
   methods: {
-    // fetchGames() {
-    //     axios.get(`/api/games?page=${this.page}`)
-    //     .then (response => {
-    //         this.games.push(...response.data.data);
-    //         console.log(this.page);
-    //     })
-    //     .catch (error => {
-    //         console.log(error)
-    //     })
-    // },
     fetchGames: function fetchGames() {
       var _this = this;
 
@@ -28421,6 +28417,11 @@ var render = function () {
                       },
                     },
                     [
+                      _c("span", { staticClass: "badge btn-action" }, [
+                        _vm._v(
+                          _vm._s(_vm._f("truncate")(game.categories, 13, "..."))
+                        ),
+                      ]),
                       _c("img", {
                         staticClass: "imgsearch",
                         attrs: {
@@ -28469,6 +28470,17 @@ var render = function () {
                         },
                       },
                       [
+                        _c("span", { staticClass: "badge btn-action" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm._f("truncate")(
+                                randomgame.categories,
+                                13,
+                                "..."
+                              )
+                            )
+                          ),
+                        ]),
                         _c("img", {
                           staticClass: "imgsearch",
                           attrs: {

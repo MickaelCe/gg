@@ -39,7 +39,7 @@ body{
     grid-template-columns: 10px 1fr 1fr 10px;
     row-gap: 10px;
     column-gap: 10px;
-    grid-template-rows: 145px 228px 145px 100px;
+    grid-template-rows: 145px 228px 145px 145px;
     grid-template-areas: 
             ". l4d l4d ."
             ". ark re ."
@@ -115,11 +115,18 @@ body{
 }
 
 .image{
+    padding: 0 !important;
     justify-self: center;
     border: solid 3px var(--action);
     width: 80px !important;
     height: 80px !important;
     border-radius: 50px;
+}
+
+.badge{
+    position: absolute;
+    right: 5px;
+    top: 5px;
 }
 
 /* color */
