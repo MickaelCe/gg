@@ -7,6 +7,7 @@ require('./bootstrap');
 
 window.Vue = require('vue').default;
 
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -19,12 +20,17 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('search-component', require('./components/Search.vue').default);
+Vue.component('home-component', require('./components/Home.vue').default);
 
 import VueObserveVisibility from 'vue-observe-visibility';
 
 import AOS from 'aos';
-
 import 'aos/dist/aos.css';
+
+import Vue from 'vue'
+import VueCompositionAPI from '@vue/composition-api'
+
+Vue.use(VueCompositionAPI)
 
 
 Vue.use(VueObserveVisibility)
@@ -34,9 +40,10 @@ Vue.use(VueObserveVisibility)
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+
 const app = new Vue({
     el: '#app',
     created () {
         AOS.init()
-    }
+    },
 });

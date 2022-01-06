@@ -1,8 +1,8 @@
 @extends('layouts.guest')
 
 @section('content')
-    <div class="card-body login-card-body">
-        <p class="login-box-msg">{{ __('Reset Password') }}</p>
+    <div class="card-body login-card-body bg-transparent">
+        <p class="login-box-msg"><span class="action">{{ __('Reset Password') }}</span></p>
 
         @if (session('status'))
             <div class="alert alert-success" role="alert">
@@ -14,11 +14,11 @@
             @csrf
 
             <div class="input-group mb-3">
-                <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
+                <input type="email" name="email" class="form-control border-0 bg-transparent loginput secondary @error('email') is-invalid @enderror"
                        placeholder="{{ __('Email') }}" required autofocus>
-                <div class="input-group-append">
-                    <div class="input-group-text">
-                        <span class="fas fa-envelope"></span>
+                <div class="input-group-append loginput secondary">
+                    <div class="input-group-text border-0">
+                        <span class="fas fa-envelope secondary"></span>
                     </div>
                 </div>
                 @error('email')
@@ -31,7 +31,7 @@
             <div class="row">
                 <div class="col-12">
                     <button type="submit"
-                            class="btn btn-primary btn-block">{{ __('Send Password Reset Link') }}</button>
+                            class="btn btn-action btn-block">{{ __('Send Password Reset Link') }}</button>
                 </div>
                 <!-- /.col -->
             </div>

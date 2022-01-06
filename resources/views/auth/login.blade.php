@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="card-body login-card-body bg-transparent log mt-5">
-        <p class="login-box-msg"><span class="action px-2">Welcome</span>back chief !</p>
+        <p class="login-box-msg"><span class="action px-2">Welcome</span>back !</p>
 
         <form action="{{ route('login') }}" method="post">
             @csrf

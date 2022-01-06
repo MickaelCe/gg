@@ -24,6 +24,9 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "@splidejs/splide": "^3.6.9",
+        "@splidejs/vue-splide": "^0.5.15",
+        "@vue/composition-api": "^1.4.3",
         "aos": "^2.3.4",
         "cross-env": "^7.0.3",
         "vue-infinite-loading": "^2.4.5",
