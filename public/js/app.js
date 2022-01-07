@@ -5273,10 +5273,31 @@ __webpack_require__.r(__webpack_exports__);
   setup: function setup() {
     var currentSlide = (0,_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__.ref)(1);
     var getSlideCount = (0,_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__.ref)(null);
+    var autoPlayEnable = (0,_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__.ref)(true);
+    var timeoutDuration = (0,_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__.ref)(5000);
 
     var goToSlide = function goToSlide(index) {
       currentSlide.value = index + 1;
     };
+
+    var nextSlide = function nextSlide() {
+      if (currentSlide.value === getSlideCount.value) {
+        currentSlide.value = 1;
+        return;
+      }
+
+      currentSlide.value += 1;
+    };
+
+    var autoPlay = function autoPlay() {
+      setInterval(function () {
+        nextSlide();
+      }, timeoutDuration.value);
+    };
+
+    if (autoPlayEnable.value) {
+      autoPlay();
+    }
 
     (0,_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__.onMounted)(function () {
       getSlideCount.value = document.querySelectorAll('.slide').length;

@@ -22,16 +22,34 @@
     <nav class="main-header navbar navbar-expand border-0">
         <!-- Left navbar links -->
         <ul class="navbar-nav">
-            <li class="nav-item">
+            <li class="nav-item navItemBureau">
+                <a href="{{ route('search') }}" class="nav-link text-white">
+                    <i class="nav-icon fas fa-search action"></i>
+                        {{ __('Search') }}
+                </a>
+            </li>
+
+            <li class="nav-item navItemBureau">
+                <a href="" class="nav-link text-white">
+                    <i class="nav-icon fas fa-star action"></i>
+                        {{ __('Favorites') }}
+                </a>
+            </li>
+            <li class="nav-item navItemBureau">
+                <a href="{{ route('profile.show') }}" class="nav-link text-white">
+                    <img class="image" src="{{asset('/storage/'.Auth::user()->img_prfl)}}" alt="profile_image">{{ Auth::user()->name }}
+                </a>
+            </li>
+            <li class="nav-item dotDesktop">
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-ellipsis-v action"></i></a>
             </li>
         </ul>
         <a href="{{ route('home') }}"class="logofull"><img class="logofull" src="{{ asset('images/logofull.png') }}"></a>
 
         <!-- Right navbar links -->
-        <ul class="navbar-nav ml-auto userinfo">
+        {{-- <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link text-white" data-toggle="dropdown" href="#" aria-expanded="false">
+                <a class="nav-link text-white" data-toggle="dropdown" href="#" aria-expanded="true">
                     {{ Auth::user()->name }}
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" style="left: inherit; right: 0px;">
@@ -50,7 +68,7 @@
                     </form>
                 </div>
             </li>
-        </ul>
+        </ul> --}}
     </nav>
     <!-- /.navbar -->
 

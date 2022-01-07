@@ -18,9 +18,29 @@ export default {
     setup() {
         const currentSlide = ref(1);
         const getSlideCount = ref(null);
+        const autoPlayEnable = ref(true);
+        const timeoutDuration = ref(5000);
 
         const goToSlide = (index) =>{
             currentSlide.value = index + 1;
+        }
+
+        const nextSlide = () => {
+            if(currentSlide.value === getSlideCount.value){
+                currentSlide.value = 1;
+                return;
+            }
+            currentSlide.value +=1;
+        }
+
+        const autoPlay = () => {
+            setInterval(() =>{
+                nextSlide()
+            }, timeoutDuration.value);
+        };
+
+        if(autoPlayEnable.value){
+            autoPlay();
         }
 
         onMounted(() =>{

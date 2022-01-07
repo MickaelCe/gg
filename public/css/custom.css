@@ -95,16 +95,16 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 20px;
     grid-template-areas: 
-            "menu menu menu menu menuend";
+            "menu menu menuend menuend menuend";
 }
 
 .logofull{
-    grid-area: menu;
+    grid-area: 1/1/2/2;
 }
 
 .navbar-nav{
     grid-area: menuend;
-    justify-self: flex-end;
+    justify-content: flex-end;
 }
 
 .userinfo{
@@ -125,7 +125,7 @@ body{
     border: solid 3px var(--action);
     width: 80px !important;
     height: 80px !important;
-    border-radius: 50px;
+    border-radius: 5px;
 }
 
 .badge{
@@ -279,15 +279,20 @@ body{
     align-items: center;
 }
 
-.desktophome{
+.desktophome, .navItemBureau{
     display: none;
 }
 
 @media screen and (min-width: 768px)
 {
     .main-header{
-        filter: opacity(0.5) ;
+        background-color: transparent;
     }
+
+    .main-sidebar{
+        background-color: #1f2225;
+    }
+    
     .searchDesk{
         display: flex;
         flex-wrap: wrap;
@@ -296,6 +301,28 @@ body{
         width: 25%;
         padding: 0 5px 0 5px;
     }
+
+    .image{
+        width: 50px !important;
+        height: 50px !important;
+        margin-right: 1rem;
+    }
+
+    .nav-link{
+        padding: 0;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dotDesktop{
+        display: none;
+    }
+
+    .navMobile{
+        display: none;
+    }
     .h4Desk{
         display: none;
     }
@@ -303,6 +330,9 @@ body{
         display: none;
     }
     .desktophome{
+        display: block;
+    }
+    .navItemBureau{
         display: block;
     }
     .carousel{
@@ -319,26 +349,60 @@ body{
     .slide>img{
         max-width: 100%;
         height: 100vh;
+        filter: brightness(0.5);
     }
 
     .pagination{
         height: 100vh;
         position: absolute;
         display: flex;
-        justify-content: space-around;
+        gap: 40px;
         flex-direction: column;
         z-index: 9999;
-
+        margin-top: 15vh;
+        margin-left: -200px;
     }
+    
     .paginationImg{
-        width: 317px;
-        height: 149px;
-        border-radius: 5px;
+        width: 287px;
+        height: 130px;
+        border-radius: 2px;
     }
+
+    .paginationImg:hover{
+        cursor: pointer;
+    }
+
+    @keyframes active {
+        from {
+            transform: translate(0px);
+        }
+      
+        to {
+            transform: translate(20px);
+        }
+      }
 
     .active{
         border: solid 3px var(--action);
         border-radius: 5px;
+        animation:0.3s ease-in active;
         transform: translate(20px);
     }
+
+    .slide-enter-active,
+    .slide-leave-active{
+        transition: opacity 1s ease-in-out;
+    }
+
+    .slide-enter,
+    .slide-leave{
+        opacity: 0.3;
+    }
+
+    .slide-enter-to,
+    .slide-leave-to{
+        opacity: 1;
+    }
+
 }
