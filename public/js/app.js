@@ -5335,6 +5335,60 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -28897,20 +28951,266 @@ var render = function () {
               var currentSlide = ref.currentSlide
               return _vm._l(_vm.carouselSlides, function (slide, index) {
                 return _c("Slide", { key: index }, [
-                  _c("img", {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: currentSlide === index + 1,
-                        expression: "currentSlide === index + 1",
+                  _c("span", [
+                    _c("img", {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: currentSlide === index + 1,
+                          expression: "currentSlide === index + 1",
+                        },
+                      ],
+                      staticClass: "spanImg",
+                      attrs: {
+                        src: __webpack_require__("./resources/js/assets sync recursive ^\\.\\/.*\\.png$")("./" + slide + ".png").default,
+                        alt: "",
                       },
-                    ],
-                    attrs: {
-                      src: __webpack_require__("./resources/js/assets sync recursive ^\\.\\/.*\\.png$")("./" + slide + ".png").default,
-                      alt: "",
-                    },
-                  }),
+                    }),
+                    _vm._v(" "),
+                    currentSlide === 1
+                      ? _c(
+                          "div",
+                          {
+                            staticClass:
+                              "mask d-flex justify-content-center align-items-end flex-column text-white pr-3 pb-3 px-5",
+                          },
+                          [
+                            _c("span", { staticClass: "action" }, [
+                              _vm._v("Survive "),
+                              _c("span", { staticClass: "text-white" }, [
+                                _vm._v("with"),
+                              ]),
+                            ]),
+                            _vm._v(" you friends\n                    "),
+                            _c(
+                              "blockquote",
+                              { staticClass: "blockquote btmHome" },
+                              [
+                                _vm._v(
+                                  "\n                        “Trust me I know how"
+                                ),
+                                _c("br"),
+                                _vm._v(
+                                  "to crown a witch...” \n                        "
+                                ),
+                                _c(
+                                  "figcaption",
+                                  { staticClass: "blockquote-footer" },
+                                  [
+                                    _vm._v(
+                                      "\n                            Famous last words\n                        "
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "h3 d-flex justify-content-center align-items-center mx-4",
+                              },
+                              [
+                                _c("p", { staticClass: "m-0 px-2" }, [
+                                  _c("i", {
+                                    staticClass: "far fa-star action",
+                                  }),
+                                  _vm._v(" Add to favorite"),
+                                ]),
+                                _vm._v(" OR\n                        "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "btn btn-action mx-4",
+                                    attrs: { target: "_blank", href: "" },
+                                  },
+                                  [_vm._v("EXPLORE")]
+                                ),
+                              ]
+                            ),
+                          ]
+                        )
+                      : currentSlide === 2
+                      ? _c(
+                          "div",
+                          {
+                            staticClass:
+                              "mask d-flex justify-content-center align-items-end flex-column text-white pr-3 pb-3 px-5",
+                          },
+                          [
+                            _c("span", { staticClass: "action" }, [
+                              _vm._v("Oscar "),
+                              _c("span", { staticClass: "text-white" }, [
+                                _vm._v("rédige"),
+                              ]),
+                            ]),
+                            _vm._v(" nous un truc\n                    "),
+                            _c(
+                              "blockquote",
+                              { staticClass: "blockquote btmHome" },
+                              [
+                                _vm._v(
+                                  "\n                        “bruh” \n                        "
+                                ),
+                                _c(
+                                  "figcaption",
+                                  { staticClass: "blockquote-footer" },
+                                  [
+                                    _vm._v(
+                                      "\n                            Raph\n                        "
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "h3 d-flex justify-content-center align-items-center mx-4",
+                              },
+                              [
+                                _c("p", { staticClass: "m-0 px-2" }, [
+                                  _c("i", {
+                                    staticClass: "far fa-star action",
+                                  }),
+                                  _vm._v(" Add to favorite"),
+                                ]),
+                                _vm._v(" OR\n                        "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "btn btn-action mx-4",
+                                    attrs: { target: "_blank", href: "" },
+                                  },
+                                  [_vm._v("EXPLORE")]
+                                ),
+                              ]
+                            ),
+                          ]
+                        )
+                      : currentSlide === 3
+                      ? _c(
+                          "div",
+                          {
+                            staticClass:
+                              "mask d-flex justify-content-center align-items-end flex-column text-white pr-3 pb-3 px-5",
+                          },
+                          [
+                            _c("span", { staticClass: "action" }, [
+                              _vm._v("Experience"),
+                            ]),
+                            _vm._v(" deep stories\n                    "),
+                            _c(
+                              "blockquote",
+                              { staticClass: "blockquote btmHome" },
+                              [
+                                _vm._v(
+                                  "\n                        “oui oui oui oui” \n                        "
+                                ),
+                                _c(
+                                  "figcaption",
+                                  { staticClass: "blockquote-footer" },
+                                  [
+                                    _vm._v(
+                                      "\n                            Moi\n                        "
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "h3 d-flex justify-content-center align-items-center mx-4",
+                              },
+                              [
+                                _c("p", { staticClass: "m-0 px-2" }, [
+                                  _c("i", {
+                                    staticClass: "far fa-star action",
+                                  }),
+                                  _vm._v(" Add to favorite"),
+                                ]),
+                                _vm._v(" OR\n                        "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "btn btn-action mx-4",
+                                    attrs: { target: "_blank", href: "" },
+                                  },
+                                  [_vm._v("EXPLORE")]
+                                ),
+                              ]
+                            ),
+                          ]
+                        )
+                      : currentSlide === 4
+                      ? _c(
+                          "div",
+                          {
+                            staticClass:
+                              "mask d-flex justify-content-center align-items-end flex-column text-white pr-3 pb-3 px-5",
+                          },
+                          [
+                            _c("span", { staticClass: "action" }, [
+                              _vm._v("Revive "),
+                              _c("span", { staticClass: "text-white" }, [
+                                _vm._v("the"),
+                              ]),
+                            ]),
+                            _vm._v(" nightmare\n                    "),
+                            _c(
+                              "blockquote",
+                              { staticClass: "blockquote btmHome" },
+                              [
+                                _vm._v(
+                                  "\n                        “Mettre une caption ici” \n                        "
+                                ),
+                                _c(
+                                  "figcaption",
+                                  { staticClass: "blockquote-footer" },
+                                  [
+                                    _vm._v(
+                                      "\n                            Moi\n                        "
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "h3 d-flex justify-content-center align-items-center mx-4",
+                              },
+                              [
+                                _c("p", { staticClass: "m-0 px-2" }, [
+                                  _c("i", {
+                                    staticClass: "far fa-star action",
+                                  }),
+                                  _vm._v(" Add to favorite"),
+                                ]),
+                                _vm._v(" OR\n                        "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "btn btn-action mx-4",
+                                    attrs: { target: "_blank", href: "" },
+                                  },
+                                  [_vm._v("EXPLORE")]
+                                ),
+                              ]
+                            ),
+                          ]
+                        )
+                      : _vm._e(),
+                  ]),
                 ])
               })
             },

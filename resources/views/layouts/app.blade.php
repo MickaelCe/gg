@@ -76,9 +76,8 @@
 
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="/" class="brand-link d-flex justify-content-around">
-            <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="brand-image">
-            <span class="brand-text font-weight-bold text-white"><span class="action">G</span>amer <span class="action">G</span>ate</span>
+        <a href="/" class="d-flex justify-content-center brand-image">
+            <img src="{{ asset('images/logoDesk.png') }}" alt="Logo" class="brand-image" height="100px">
         </a>
 
         @include('layouts.navigation')

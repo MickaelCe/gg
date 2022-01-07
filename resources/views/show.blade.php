@@ -21,7 +21,7 @@
                 <h5 class="px-5">{{$game->user_reviews}}</h5>
             </div>
             <div class="gameaction text-white">
-                <p><i class="far fa-star action"></i> Add to favorite<p>
+                <p><i class="far fa-star action"></i> Add to favorite</p>
                 <a class="btn btn-action" target="_blank" href="{{$game->link}}">GET IT NOW !</a>
             </div>
     </div>
