@@ -295,6 +295,7 @@ body{
     }
     .main-header{
         background-color: transparent;
+        height: 90px;
     }
 
     .main-sidebar{
@@ -304,6 +305,8 @@ body{
     .searchDesk{
         display: flex;
         flex-wrap: wrap;
+        z-index: 999999;
+        width: 100%;
     }
     .searchDeskImg{
         width: 25%;
@@ -368,7 +371,7 @@ body{
         position: relative;
     }
     .spanImg{
-        margin-top: 104px;
+        margin-top: 50px;
         height: 100vh;
         width: 100%;
         position: relative;
@@ -379,8 +382,7 @@ body{
         position: absolute;
         overflow: hidden;
         background-attachment: fixed;
-        background: rgb(0,0,0);
-        background: linear-gradient(156deg, rgba(33, 32, 37, 0.3) 4%, rgba(33, 32, 37,0.8183648459383753) 57%, rgba(33, 32, 37,1) 100%);
+        background: rgba(0, 0, 0, 0.459);
         font-size: 104px;
         font-weight: 900;
         line-height: 1;
@@ -463,4 +465,34 @@ body{
         display: block;
         object-fit: fill;
     }
+
+    .mobilelogin {
+        display: grid;
+        grid-template-columns: 5% 1fr 1fr 5%;
+        grid-template-rows: 20vh 75vh 5vh;
+        grid-template-areas:
+            "logo logo logo"
+            "login login login"
+            "footer footer footer";
+        margin-bottom: 0 !important;
+    }
+
+    body {
+        background: url(../images/bgdesktop.png) no-repeat center right fixed;
+        background-size: cover !important;
+    }
+
+    .login-card-body, .register-card-body {
+        background-color: #212025 !important;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .inputsearch{
+        position: absolute;
+        width: 50%;
+        top: 30px;
+        z-index: 9999;
+    }
+    
 }

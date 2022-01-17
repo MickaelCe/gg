@@ -16,7 +16,7 @@
     <!-- Main content -->
     <div class="content ">
         <div class="container-fluid profil">
-            <div class="row">
+            <div class="row d-flex justify-content-center">
                 <div class="col-lg-6">
                     <div class="card">
 

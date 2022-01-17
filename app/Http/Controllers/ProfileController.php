@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\ProfileUpdateRequest;
+use Illuminate\Support\Facades\Route;
 
 class ProfileController extends Controller
 {
     public function show()
     {
-        return view('auth.profile');
+        $name = Route::currentRouteName();
+        return view('auth.profile', compact('name'));
     }
 
     public function update(ProfileUpdateRequest $request)

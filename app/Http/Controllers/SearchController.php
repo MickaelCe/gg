@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 class SearchController extends Controller
 {
@@ -13,6 +14,7 @@ class SearchController extends Controller
      */
     public function index()
     {
-        return view('search');
+        $name = Route::currentRouteName();
+        return view('search', compact('name'));
     }
 }

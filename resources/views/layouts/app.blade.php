@@ -19,7 +19,11 @@
 <div class="wrapper">
 
     <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand border-0">
+    <nav class="main-header navbar navbar-expand border-0"
+    @if($name ?? '' !== (''))
+        style="background-color: #212025;"
+    @endif
+    >
         <!-- Left navbar links -->
         <ul class="navbar-nav">
             <li class="nav-item navItemBureau">
@@ -74,11 +78,22 @@
 
     <!-- Main Sidebar Container -->
 
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <aside class="main-sidebar sidebar-dark-primary elevation-4"
+       @if($name ?? '' !== (''))
+        style="background-color: transparent;
+        box-shadow: 0 0 0 rgba(0,0,0,0),0 0px 0px rgba(0,0,0,0)!important;"
+        @endif>
         <!-- Brand Logo -->
+        @if($name ?? '' !== (''))
+        <a href="/" class="d-flex justify-content-center brand-image">
+            <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="brand-image" height="70px">
+        </a>  
+        @else
         <a href="/" class="d-flex justify-content-center brand-image">
             <img src="{{ asset('images/logoDesk.png') }}" alt="Logo" class="brand-image" height="100px">
-        </a>
+        </a>        
+        @endif>
+
 
         @include('layouts.navigation')
     </aside>
