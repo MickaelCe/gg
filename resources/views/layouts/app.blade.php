@@ -17,7 +17,18 @@
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-
+<ul class="background">
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+</ul>
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand border-0"
     @if($name ?? '' !== (''))
@@ -41,8 +52,21 @@
             </li>
             <li class="nav-item navItemBureau">
                 <a href="{{ route('profile.show') }}" class="nav-link text-white">
+                    @if(Auth::user()->img_prfl == 'user.png')
+                     <img class="image" src="{{ asset('images/default.png') }}" alt="profile_image">{{ Auth::user()->name }}
+                    @else
                     <img class="image" src="{{asset('/storage/'.Auth::user()->img_prfl)}}" alt="profile_image">{{ Auth::user()->name }}
+                    @endif
                 </a>
+            </li>
+            <li class="nav-item navItemBureau">
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <a href="{{ route('logout') }}" class="nav-link" 
+                           onclick="event.preventDefault(); this.closest('form').submit();">
+                            <i class="mr-2 fas fa-sign-out-alt action"></i>
+                        </a>
+                    </form>
             </li>
             <li class="nav-item dotDesktop">
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-ellipsis-v action"></i></a>
@@ -50,29 +74,6 @@
         </ul>
         <a href="{{ route('home') }}"class="logofull"><img class="logofull" src="{{ asset('images/logofull.png') }}"></a>
 
-        <!-- Right navbar links -->
-        {{-- <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link text-white" data-toggle="dropdown" href="#" aria-expanded="true">
-                    {{ Auth::user()->name }}
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" style="left: inherit; right: 0px;">
-                    <a href="{{ route('profile.show') }}" class="dropdown-item">
-                        <i class="mr-2 fas fa-file"></i>
-                        {{ __('My profile') }}
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <a href="{{ route('logout') }}" class="dropdown-item"
-                           onclick="event.preventDefault(); this.closest('form').submit();">
-                            <i class="mr-2 fas fa-sign-out-alt"></i>
-                            {{ __('Log Out') }}
-                        </a>
-                    </form>
-                </div>
-            </li>
-        </ul> --}}
     </nav>
     <!-- /.navbar -->
 

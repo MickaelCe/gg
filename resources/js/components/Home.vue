@@ -13,8 +13,8 @@
                         </figcaption>
                     </blockquote>
                     <div class="h3 d-flex justify-content-center align-items-center mx-4">
-                        <p class="m-0 px-2"><i class="far fa-star action"></i> Add to favorite</p> OR
-                        <a class="btn btn-action mx-4" target="_blank" href="">EXPLORE</a>
+                        <a href='' class="m-0 px-2"><i class="far fa-star action"></i> Add to favorite</a> OR
+                        <a class="btn btn-action mx-4" target="_blank" href="/show/767">EXPLORE</a>
                     </div>
                 </div>
                 <div v-else-if="currentSlide === 2" class="mask d-flex justify-content-center align-items-end flex-column text-white pr-3 pb-3 px-5">
@@ -26,8 +26,8 @@
                         </figcaption>
                     </blockquote>
                     <div class="h3 d-flex justify-content-center align-items-center mx-4">
-                        <p class="m-0 px-2"><i class="far fa-star action"></i> Add to favorite</p> OR
-                        <a class="btn btn-action mx-4" target="_blank" href="">EXPLORE</a>
+                        <a href='' class="m-0 px-2"><i class="far fa-star action"></i> Add to favorite</a> OR
+                        <a class="btn btn-action mx-4" target="_blank" href="/show/54">EXPLORE</a>
                     </div>
                 </div>
                 <div v-else-if="currentSlide === 3" class="mask d-flex justify-content-center align-items-end flex-column text-white pr-3 pb-3 px-5">
@@ -39,8 +39,8 @@
                         </figcaption>
                     </blockquote>
                     <div class="h3 d-flex justify-content-center align-items-center mx-4">
-                        <p class="m-0 px-2"><i class="far fa-star action"></i> Add to favorite</p> OR
-                        <a class="btn btn-action mx-4" target="_blank" href="">EXPLORE</a>
+                        <a href='' class="m-0 px-2"><i class="far fa-star action"></i> Add to favorite</a> OR
+                        <a class="btn btn-action mx-4" target="_blank" href="/show/465">EXPLORE</a>
                     </div>
                 </div>
                 <div v-else-if="currentSlide === 4" class="mask d-flex justify-content-center align-items-end flex-column text-white pr-3 pb-3 px-5">
@@ -52,8 +52,8 @@
                         </figcaption>
                     </blockquote>
                     <div class="h3 d-flex justify-content-center align-items-center mx-4">
-                        <p class="m-0 px-2"><i class="far fa-star action"></i> Add to favorite</p> OR
-                        <a class="btn btn-action mx-4" target="_blank" href="">EXPLORE</a>
+                        <a href='' class="m-0 px-2"><i class="far fa-star action"></i> Add to favorite</a> OR
+                        <a class="btn btn-action mx-4" target="_blank" href="/show/235">EXPLORE</a>
                     </div>
                 </div>
                 </span>

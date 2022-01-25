@@ -29013,18 +29013,28 @@ var render = function () {
                                   "h3 d-flex justify-content-center align-items-center mx-4",
                               },
                               [
-                                _c("p", { staticClass: "m-0 px-2" }, [
-                                  _c("i", {
-                                    staticClass: "far fa-star action",
-                                  }),
-                                  _vm._v(" Add to favorite"),
-                                ]),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "m-0 px-2",
+                                    attrs: { href: "" },
+                                  },
+                                  [
+                                    _c("i", {
+                                      staticClass: "far fa-star action",
+                                    }),
+                                    _vm._v(" Add to favorite"),
+                                  ]
+                                ),
                                 _vm._v(" OR\n                        "),
                                 _c(
                                   "a",
                                   {
                                     staticClass: "btn btn-action mx-4",
-                                    attrs: { target: "_blank", href: "" },
+                                    attrs: {
+                                      target: "_blank",
+                                      href: "/show/767",
+                                    },
                                   },
                                   [_vm._v("EXPLORE")]
                                 ),
@@ -29073,18 +29083,28 @@ var render = function () {
                                   "h3 d-flex justify-content-center align-items-center mx-4",
                               },
                               [
-                                _c("p", { staticClass: "m-0 px-2" }, [
-                                  _c("i", {
-                                    staticClass: "far fa-star action",
-                                  }),
-                                  _vm._v(" Add to favorite"),
-                                ]),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "m-0 px-2",
+                                    attrs: { href: "" },
+                                  },
+                                  [
+                                    _c("i", {
+                                      staticClass: "far fa-star action",
+                                    }),
+                                    _vm._v(" Add to favorite"),
+                                  ]
+                                ),
                                 _vm._v(" OR\n                        "),
                                 _c(
                                   "a",
                                   {
                                     staticClass: "btn btn-action mx-4",
-                                    attrs: { target: "_blank", href: "" },
+                                    attrs: {
+                                      target: "_blank",
+                                      href: "/show/54",
+                                    },
                                   },
                                   [_vm._v("EXPLORE")]
                                 ),
@@ -29130,18 +29150,28 @@ var render = function () {
                                   "h3 d-flex justify-content-center align-items-center mx-4",
                               },
                               [
-                                _c("p", { staticClass: "m-0 px-2" }, [
-                                  _c("i", {
-                                    staticClass: "far fa-star action",
-                                  }),
-                                  _vm._v(" Add to favorite"),
-                                ]),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "m-0 px-2",
+                                    attrs: { href: "" },
+                                  },
+                                  [
+                                    _c("i", {
+                                      staticClass: "far fa-star action",
+                                    }),
+                                    _vm._v(" Add to favorite"),
+                                  ]
+                                ),
                                 _vm._v(" OR\n                        "),
                                 _c(
                                   "a",
                                   {
                                     staticClass: "btn btn-action mx-4",
-                                    attrs: { target: "_blank", href: "" },
+                                    attrs: {
+                                      target: "_blank",
+                                      href: "/show/465",
+                                    },
                                   },
                                   [_vm._v("EXPLORE")]
                                 ),
@@ -29190,18 +29220,28 @@ var render = function () {
                                   "h3 d-flex justify-content-center align-items-center mx-4",
                               },
                               [
-                                _c("p", { staticClass: "m-0 px-2" }, [
-                                  _c("i", {
-                                    staticClass: "far fa-star action",
-                                  }),
-                                  _vm._v(" Add to favorite"),
-                                ]),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "m-0 px-2",
+                                    attrs: { href: "" },
+                                  },
+                                  [
+                                    _c("i", {
+                                      staticClass: "far fa-star action",
+                                    }),
+                                    _vm._v(" Add to favorite"),
+                                  ]
+                                ),
                                 _vm._v(" OR\n                        "),
                                 _c(
                                   "a",
                                   {
                                     staticClass: "btn btn-action mx-4",
-                                    attrs: { target: "_blank", href: "" },
+                                    attrs: {
+                                      target: "_blank",
+                                      href: "/show/235",
+                                    },
                                   },
                                   [_vm._v("EXPLORE")]
                                 ),
