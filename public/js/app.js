@@ -5450,8 +5450,8 @@ __webpack_require__.r(__webpack_exports__);
       games: [],
       randomgames: [],
       q: '',
-      page: 5,
-      pagerandom: 5
+      page: 20,
+      pagerandom: 20
     };
   },
   filters: {
@@ -29016,7 +29016,7 @@ var render = function () {
                                 _c(
                                   "a",
                                   {
-                                    staticClass: "m-0 px-2",
+                                    staticClass: "m-0 px-2 action",
                                     attrs: { href: "" },
                                   },
                                   [
@@ -29086,7 +29086,7 @@ var render = function () {
                                 _c(
                                   "a",
                                   {
-                                    staticClass: "m-0 px-2",
+                                    staticClass: "m-0 px-2 action",
                                     attrs: { href: "" },
                                   },
                                   [
@@ -29153,7 +29153,7 @@ var render = function () {
                                 _c(
                                   "a",
                                   {
-                                    staticClass: "m-0 px-2",
+                                    staticClass: "m-0 px-2 action",
                                     attrs: { href: "" },
                                   },
                                   [
@@ -29223,7 +29223,7 @@ var render = function () {
                                 _c(
                                   "a",
                                   {
-                                    staticClass: "m-0 px-2",
+                                    staticClass: "m-0 px-2 action",
                                     attrs: { href: "" },
                                   },
                                   [

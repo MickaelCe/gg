@@ -35,6 +35,8 @@
         style="background-color: #212025;"
     @endif
     >
+
+<a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
         <!-- Left navbar links -->
         <ul class="navbar-nav">
             <li class="nav-item navItemBureau">
@@ -118,7 +120,7 @@
     <!-- Main Footer -->
     <footer class="main-footer d-flex justify-content-center border-0">
         <!-- Default to the left -->
-        <strong class="action">Copyright &copy; 2014-2021</strong>
+        <strong class="action">Copyright &copy; 2014-2022</strong>
     </footer>
 </div>
 <!-- ./wrapper -->
@@ -126,6 +128,7 @@
 <!-- REQUIRED SCRIPTS -->
 <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/custom.js') }}"></script>
 
 <!-- AdminLTE App -->
 <script src="{{ asset('js/adminlte.min.js') }}"></script>

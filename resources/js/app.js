@@ -22,6 +22,7 @@ window.Vue = require('vue').default;
 Vue.component('search-component', require('./components/Search.vue').default);
 Vue.component('home-component', require('./components/Home.vue').default);
 
+
 import VueObserveVisibility from 'vue-observe-visibility';
 
 import AOS from 'aos';
@@ -31,9 +32,8 @@ import Vue from 'vue'
 import VueCompositionAPI from '@vue/composition-api'
 
 Vue.use(VueCompositionAPI)
-
-
 Vue.use(VueObserveVisibility)
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

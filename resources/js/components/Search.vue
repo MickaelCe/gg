@@ -33,8 +33,8 @@
                 games: [],
                 randomgames: [],
                 q: '',
-                page: 5,
-                pagerandom: 5
+                page: 20,
+                pagerandom: 20
             }
         },
 

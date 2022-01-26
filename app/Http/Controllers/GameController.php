@@ -19,7 +19,9 @@ class GameController extends Controller
     public function show($id)
     {
         $game = Game::where('id', $id)->first();
+        $gamerandomsleft = Game::inRandomOrder()->limit(2)->get();
+        $gamerandomsright = Game::inRandomOrder()->limit(2)->get();
         $name = Route::currentRouteName();
-        return view('show', compact('game','name'));
+        return view('show', compact('game','name', 'gamerandomsleft', 'gamerandomsright'));
     }
 }
