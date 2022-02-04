@@ -26,4 +26,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('search', [\App\Http\Controllers\SearchController::class, 'index'])->name('search');
     Route::get('show/{id}', [\App\Http\Controllers\GameController::class, 'show'])->name('show');
+
+    Route::get('favorite', [\App\Http\Controllers\FavoriteController::class, 'index'])->name('favorite');
+    Route::post('favorite/store', [\App\Http\Controllers\FavoriteController::class, 'store'])->name('store');
+    Route::delete('favorite/destroy/{id}', [\App\Http\Controllers\FavoriteController::class, 'destroy'])->name('destroy');
 });

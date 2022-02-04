@@ -47,7 +47,7 @@
             </li>
 
             <li class="nav-item navItemBureau">
-                <a href="" class="nav-link text-white">
+                <a href="{{ route('favorite') }}" class="nav-link text-white">
                     <i class="nav-icon fas fa-star action"></i>
                         {{ __('Favorites') }}
                 </a>
@@ -129,6 +129,7 @@
 <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/custom.js') }}"></script>
+<script src="{{ asset('js/ajax.js') }}"></script>
 
 <!-- AdminLTE App -->
 <script src="{{ asset('js/adminlte.min.js') }}"></script>

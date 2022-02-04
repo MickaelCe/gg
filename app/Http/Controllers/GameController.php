@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Game;
+use App\Models\{Game, Favorite};
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\{Route, Auth};
 
 class GameController extends Controller
 {
@@ -22,6 +22,11 @@ class GameController extends Controller
         $gamerandomsleft = Game::inRandomOrder()->limit(2)->get();
         $gamerandomsright = Game::inRandomOrder()->limit(2)->get();
         $name = Route::currentRouteName();
-        return view('show', compact('game','name', 'gamerandomsleft', 'gamerandomsright'));
+
+        $auth = Auth::user();
+        $userfavorites = Favorite::where('user_id', $auth->id)->where('steam_game_id', $id)->first();
+
+        return view('show', compact('game','name', 'gamerandomsleft', 'gamerandomsright', 'userfavorites'));
     }
+
 }

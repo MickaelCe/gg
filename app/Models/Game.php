@@ -9,4 +9,11 @@ class Game extends Model
 {
     use HasFactory;
     protected $table = 'steam_game';
+
+    //User
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'favorites', 'steam_game_id', 'user_id');
+    }
 }

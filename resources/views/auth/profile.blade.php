@@ -28,7 +28,7 @@
 
                                 <div class="input-group mb-3">
                                     <input type="text" name="name"
-                                           class="form-control @error('name') is-invalid @enderror"
+                                           class="form-control action @error('name') is-invalid @enderror"
                                            placeholder="{{ __('Name') }}" value="{{ old('name', auth()->user()->name) }}" required>
                                     <div class="input-group-append">
                                         <div class="input-group-text">
@@ -44,7 +44,7 @@
 
                                 <div class="input-group mb-3">
                                     <input type="email" name="email"
-                                           class="form-control @error('email') is-invalid @enderror"
+                                           class="form-control action @error('email') is-invalid @enderror"
                                            placeholder="{{ __('Email') }}" value="{{ old('email', auth()->user()->email) }}" required>
                                     <div class="input-group-append">
                                         <div class="input-group-text">
@@ -60,7 +60,7 @@
 
                                 <div class="input-group mb-3">
                                     <input type="password" name="password"
-                                           class="form-control @error('password') is-invalid @enderror"
+                                           class="form-control action @error('password') is-invalid @enderror"
                                            placeholder="{{ __('New password') }}">
                                     <div class="input-group-append">
                                         <div class="input-group-text">
@@ -76,7 +76,7 @@
 
                                 <div class="input-group mb-3">
                                     <input type="password" name="password_confirmation"
-                                           class="form-control @error('password_confirmation') is-invalid @enderror"
+                                           class="form-control  action @error('password_confirmation') is-invalid @enderror"
                                            placeholder="{{ __('New password confirmation') }}"
                                            autocomplete="new-password">
                                     <div class="input-group-append">
@@ -87,10 +87,16 @@
                                 </div>
 
 
-                                <div class="input-group mb-3">
+                                <div class="input-group mb-3 d-flex flex-column align-items-center">
+                                <div class="imgprofile action">
                                     <label>{{ __('New profile picture') }}</label>
+                                    <label>{{ __('Current profile picture :') }}</label>
+                                </div>    
+                                <div class="imgprofile">
                                     <input type="file" name="img_prfl"
                                            class="@error('img_prfl') is-invalid @enderror">
+                                    <img src="{{asset('/storage/'.Auth::user()->img_prfl)}}" width='70px'>
+                                </div>
                                 </div>
 
                             </div>

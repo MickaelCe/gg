@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
 <div class="bgWrapper overflow-hidden">
     <div class="bginfos">
         <img src="{{$game->img_url}}" class="cover">
@@ -21,7 +20,28 @@
                 <h5 class="px-5">{{$game->user_reviews}}</h5>
             </div>
             <div class="gameaction text-white">
-                <a href="" class="action"><i class="far fa-star action"></i> Add to favorite</a>
+            @if(empty($userfavorites->steam_game_id))
+                <form action="{{ route('store', $game->id) }}" method="POST">
+                @csrf
+                    <div class="form-group d-none">
+                        <input type="text" name="steam_game_id" class="form-control" id="steam_game_id" value="{{$game->id}}" maxlength="255" required>
+                    </div>
+                    <div class="col-12 d-flex align-items-center">
+                    <button type="submit" class="btn btn-link third "><i class="far fa-star fa-2x third"></i> <span class='h3'>Add to favorite</span></button>
+                    </div>
+                </form>
+            @else
+                <form action="{{route('destroy', $game->id)}}" method="POST">
+                @csrf
+                @method('DELETE')
+                    <div class="form-group d-none">
+                        <input type="text" name="steam_game_id" class="form-control" id="steam_game_id" value="{{$game->id}}" maxlength="255" required>
+                    </div>
+                    <div class="col-12 d-flex align-items-center">
+                    <button type="submit" class="btn btn-link third deleteFavorite" data-id="{{$game->id}}" data-token="{{ csrf_token() }}"><i class="fas fa-star fa-2x third"></i><span class='h3'>Unfavorite</span></button>
+                    </div>
+                </form>
+            @endif
                 <a class="btn btn-action" target="_blank" href="{{$game->link}}">GET IT NOW !</a>
             </div>
 

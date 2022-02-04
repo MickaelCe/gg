@@ -3,10 +3,10 @@
       <slot :currentSlide="currentSlide"/>
       <div class="pagination">
           <div v-for="(slide, index) in getSlideCount" :key="index" :class="{ active : index + 1 === currentSlide }">
-              <img @click="goToSlide(index)" v-if="slide === 1" :src="require(`../assets/dl4d.png`).default" class="paginationImg">
-              <img @click="goToSlide(index)" v-else-if="slide === 2" :src="require(`../assets/dark.png`).default" class="paginationImg">
-              <img @click="goToSlide(index)" v-else-if="slide === 3" :src="require(`../assets/dnier.png`).default" class="paginationImg">
-              <img @click="goToSlide(index)" v-else-if="slide === 4" :src="require(`../assets/dre.png`).default" class="paginationImg">
+              <img @click="goToSlide(index)" v-if="slide === 1" :src="require(`../assets/dl4dmini.png`).default" class="paginationImg">
+              <img @click="goToSlide(index)" v-else-if="slide === 2" :src="require(`../assets/darkmini.png`).default" class="paginationImg">
+              <img @click="goToSlide(index)" v-else-if="slide === 3" :src="require(`../assets/dniermini.png`).default" class="paginationImg">
+              <img @click="goToSlide(index)" v-else-if="slide === 4" :src="require(`../assets/dremini.png`).default" class="paginationImg">
           </div>
       </div>
   </div>

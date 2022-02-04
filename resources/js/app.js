@@ -21,7 +21,7 @@ window.Vue = require('vue').default;
 
 Vue.component('search-component', require('./components/Search.vue').default);
 Vue.component('home-component', require('./components/Home.vue').default);
-
+Vue.component('favorite-component', require('./components/Favorite.vue').default);
 
 import VueObserveVisibility from 'vue-observe-visibility';
 

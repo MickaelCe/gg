@@ -42,4 +42,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //Favorites
+    public function favorites()
+    {
+        return $this->belongsToMany(Game::class, 'favorites', 'user_id', 'steam_game_id')->withTimeStamps();
+    }
 }

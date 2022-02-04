@@ -1,6 +1,8 @@
 :root {
     --action: #FB8122;
     --secondary: #fb80229c;
+    --third: #E39355;
+    
   }
 
 
@@ -251,6 +253,14 @@ undefined
     color:var(--secondary);
 }
 
+.third{
+    color:var(--third);
+}
+
+.third:hover{
+    color:#d66c1b;
+}
+
 .btn-action{
     background-color:var(--action);
     color: #fff;
@@ -432,6 +442,31 @@ undefined
     background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg) no-repeat center 50%;
     background-color: var(--action);
     background-color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.8)
+}
+
+.imgprofile{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bgWrapperFavorite{
+    background-color: red !important;
+    z-index: 99999999;
+    height: 100%;
+}
+
+.infosFav{
+    margin-top: 200px;
+    background-color: transparent;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.infosFav>ul{
+    list-style: none;
 }
 
 @media screen and (min-width: 768px)
