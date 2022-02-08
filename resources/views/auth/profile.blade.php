@@ -1,20 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1 class="m-0">{{ __('My profile') }}</h1>
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
 
     <!-- Main content -->
-    <div class="content ">
+    <div class="content">
         <div class="container-fluid profil">
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-6">
@@ -24,14 +13,14 @@
                             @csrf
                             @method('PUT')
 
-                            <div class="card-body">
+                            <div class="card-body profilbg">
 
-                                <div class="input-group mb-3">
+                                <div class="input-group mb-3 border-0">
                                     <input type="text" name="name"
-                                           class="form-control action @error('name') is-invalid @enderror"
+                                           class="form-control border-0 bg-transparent loginput secondary @error('name') is-invalid @enderror"
                                            placeholder="{{ __('Name') }}" value="{{ old('name', auth()->user()->name) }}" required>
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
+                                    <div class="input-group-append loginput secondary">
+                                        <div class="input-group-text secondary bg-transparent border-0">
                                             <span class="fas fa-user"></span>
                                         </div>
                                     </div>
@@ -44,11 +33,11 @@
 
                                 <div class="input-group mb-3">
                                     <input type="email" name="email"
-                                           class="form-control action @error('email') is-invalid @enderror"
+                                           class="form-control border-0 bg-transparent loginput secondary @error('email') is-invalid @enderror"
                                            placeholder="{{ __('Email') }}" value="{{ old('email', auth()->user()->email) }}" required>
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <span class="fas fa-envelope"></span>
+                                    <div class="input-group-append loginput secondary">
+                                        <div class="input-group-text secondary bg-transparent border-0">
+                                            <span class="fas fa-envelope border-0"></span>
                                         </div>
                                     </div>
                                     @error('email')
@@ -60,10 +49,10 @@
 
                                 <div class="input-group mb-3">
                                     <input type="password" name="password"
-                                           class="form-control action @error('password') is-invalid @enderror"
+                                           class="form-control border-0 bg-transparent loginput secondary @error('password') is-invalid @enderror"
                                            placeholder="{{ __('New password') }}">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
+                                    <div class="input-group-append loginput secondary">
+                                        <div class="input-group-text secondary bg-transparent border-0">
                                             <span class="fas fa-lock"></span>
                                         </div>
                                     </div>
@@ -76,11 +65,11 @@
 
                                 <div class="input-group mb-3">
                                     <input type="password" name="password_confirmation"
-                                           class="form-control  action @error('password_confirmation') is-invalid @enderror"
+                                           class="form-control  border-0 bg-transparent loginput secondary @error('password_confirmation') is-invalid @enderror"
                                            placeholder="{{ __('New password confirmation') }}"
                                            autocomplete="new-password">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
+                                    <div class="input-group-append loginput secondary">
+                                        <div class="input-group-text secondary bg-transparent border-0">
                                             <span class="fas fa-lock"></span>
                                         </div>
                                     </div>
@@ -98,11 +87,9 @@
                                     <img src="{{asset('/storage/'.Auth::user()->img_prfl)}}" width='70px'>
                                 </div>
                                 </div>
-
                             </div>
-
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
+                            <div class="card-footer profilbg">
+                                <button type="submit" class="btn btn-action">{{ __('Submit') }}</button>
                             </div>
                         </form>
                     </div>

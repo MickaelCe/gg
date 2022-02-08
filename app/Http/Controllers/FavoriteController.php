@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Favorite;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\{Route, Auth};
 
 class FavoriteController extends Controller
 {
@@ -12,7 +12,9 @@ class FavoriteController extends Controller
     {
         $auth = auth()->user();
         $userfavorites = Favorite::where('user_id', $auth->id)->get();
-        return view('favorite', compact('userfavorites'));
+        $name = Route::currentRouteName();
+
+        return view('favorite', compact('userfavorites','name'));
     }
 
 

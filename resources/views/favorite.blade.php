@@ -2,15 +2,14 @@
 
 @section('content')
 
-<div class="bgWrapper overflow-hidden">
-    <div class="infosFav">
+<div class="bgWrapper overflowfav bgWrapperbg">
+    <div class="searchDesk">
     @foreach (auth()->user()->favorites as $favorite)
-        <div class="card my-3 bg-transparent">
-            <a href="/show/{{$favorite->id}}" data-aos="fade-left"><span class="badge btn-action">{{$favorite->categories}}</span><img src="{{$favorite->img_url}}" class="imgsearch" alt="{{$favorite->names}}" /></a>
+        <div class="card my-3 bg-transparent searchDeskImg">
+            <a href="/show/{{$favorite->id}}"><span class="badge btn-action">{{ Str::limit($favorite->categories, 13) }}</span><img src="{{$favorite->img_url}}" class="imgsearch" alt="{{$favorite->names}}" /></a>
         </div>
     @endforeach    
     </div>
-
 </div>
     {{-- <div id="app">
         <div class="container py-3 overflow-hidden">

@@ -5,7 +5,7 @@
 
     <!-- Main content -->
     <div id="app">
-        <div class="container py-3 overflow-hidden">
+        <div class="py-3 overflow-hidden bgWrapperbg">
             <search-component></search-component>
         </div>
     </div>

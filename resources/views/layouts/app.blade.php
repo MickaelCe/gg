@@ -17,24 +17,8 @@
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-<ul class="background">
-   <li></li>
-   <li></li>
-   <li></li>
-   <li></li>
-   <li></li>
-   <li></li>
-   <li></li>
-   <li></li>
-   <li></li>
-   <li></li>
-</ul>
     <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand border-0"
-    @if($name ?? '' !== (''))
-        style="background-color: #212025;"
-    @endif
-    >
+    <nav class="main-header navbar navbar-expand border-0">
 
 <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
         <!-- Left navbar links -->
@@ -75,7 +59,15 @@
             </li>
         </ul>
         <a href="{{ route('home') }}"class="logofull"><img class="logofull" src="{{ asset('images/logofull.png') }}"></a>
-
+        @if($name ?? '' !== (''))
+        <a href="/" class="d-flex justify-content-center brand-image">
+            <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="brand-image" height="70px">
+        </a>  
+        @else
+        <a href="/" class="d-flex justify-content-center brand-image">
+            <img src="{{ asset('images/logoDesk.png') }}" alt="Logo" class="brand-image" height="100px">
+        </a>        
+        @endif>
     </nav>
     <!-- /.navbar -->
 
@@ -87,22 +79,11 @@
         box-shadow: 0 0 0 rgba(0,0,0,0),0 0px 0px rgba(0,0,0,0)!important;"
         @endif>
         <!-- Brand Logo -->
-        @if($name ?? '' !== (''))
-        <a href="/" class="d-flex justify-content-center brand-image">
-            <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="brand-image" height="70px">
-        </a>  
-        @else
-        <a href="/" class="d-flex justify-content-center brand-image">
-            <img src="{{ asset('images/logoDesk.png') }}" alt="Logo" class="brand-image" height="100px">
-        </a>        
-        @endif>
-
-
         @include('layouts.navigation')
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+    <div class="content-wrapper bgWrapperbg">
         @yield('content')
     </div>
     <!-- /.content-wrapper -->

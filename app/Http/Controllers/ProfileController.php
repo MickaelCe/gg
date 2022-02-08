@@ -20,6 +20,10 @@ class ProfileController extends Controller
             auth()->user()->update(['password' => Hash::make($request->password)]);
         }
 
+        $request->validate([
+            'img_prfl' => 'required'
+        ]);
+
         auth()->user()->update([
             'name' => $request->name,
             'email' => $request->email,
