@@ -4,8 +4,8 @@
         <div v-if="q != ''" class="searchDesk">
             <div class="searchDesk">
             <div v-for="game in getFilteredGames" v-bind:key="game.id" class="searchDeskImg">
-                <div class="card my-3 bg-transparent">
-                <a :href="`/show/${game.id}`" data-aos="fade-left"><span class="badge btn-action">{{game.categories | truncate(13, '...')}}</span><img :src="`${game.img_url}`" class="imgsearch" alt="Couverture du jeux" /></a>
+                <div class="card my-3 bg-transparent imgsearch">
+                <a :href="`/show/${game.id}`" data-aos="fade-left"><span class="badge btn-action">{{game.categories | truncate(13, '...')}}</span><img :src="`${game.img_url}`" class="imgSearchimg" alt="Couverture du jeux" /></a>
                 </div>
             </div>
             </div>
@@ -15,8 +15,8 @@
             <h4 class="text-white text-center py-4 h4Desk">or <span class="action">scroll</span> to find new ones</h4>
             <div class="searchDesk">
                 <div v-for="randomgame in getRandomFilteredGames" v-bind:key="randomgame.id" class="searchDeskImg">
-                    <div class="card my-3 bg-transparent">
-                        <a :href="`/show/${randomgame.id}`" data-aos="fade-left"><span class="badge btn-action">{{randomgame.categories | truncate(13, '...')}}</span><img :src="`${randomgame.img_url}`" class="imgsearch" alt="Couverture du jeux" /></a>
+                    <div class="card my-3 bg-transparent imgsearch">
+                        <a :href="`/show/${randomgame.id}`" data-aos="fade-left"><span class="badge btn-action">{{randomgame.categories | truncate(13, '...')}}</span><img :src="`${randomgame.img_url}`" class="imgSearchimg" alt="Couverture du jeux" /></a>
                     </div>
                 </div>
             </div>

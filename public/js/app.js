@@ -29548,31 +29548,37 @@ var render = function () {
             { staticClass: "searchDesk" },
             _vm._l(_vm.getFilteredGames, function (game) {
               return _c("div", { key: game.id, staticClass: "searchDeskImg" }, [
-                _c("div", { staticClass: "card my-3 bg-transparent" }, [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "/show/" + game.id,
-                        "data-aos": "fade-left",
-                      },
-                    },
-                    [
-                      _c("span", { staticClass: "badge btn-action" }, [
-                        _vm._v(
-                          _vm._s(_vm._f("truncate")(game.categories, 13, "..."))
-                        ),
-                      ]),
-                      _c("img", {
-                        staticClass: "imgsearch",
+                _c(
+                  "div",
+                  { staticClass: "card my-3 bg-transparent imgsearch" },
+                  [
+                    _c(
+                      "a",
+                      {
                         attrs: {
-                          src: "" + game.img_url,
-                          alt: "Couverture du jeux",
+                          href: "/show/" + game.id,
+                          "data-aos": "fade-left",
                         },
-                      }),
-                    ]
-                  ),
-                ]),
+                      },
+                      [
+                        _c("span", { staticClass: "badge btn-action" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm._f("truncate")(game.categories, 13, "...")
+                            )
+                          ),
+                        ]),
+                        _c("img", {
+                          staticClass: "imgSearchimg",
+                          attrs: {
+                            src: "" + game.img_url,
+                            alt: "Couverture du jeux",
+                          },
+                        }),
+                      ]
+                    ),
+                  ]
+                ),
               ])
             }),
             0
@@ -29601,37 +29607,41 @@ var render = function () {
                 "div",
                 { key: randomgame.id, staticClass: "searchDeskImg" },
                 [
-                  _c("div", { staticClass: "card my-3 bg-transparent" }, [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "/show/" + randomgame.id,
-                          "data-aos": "fade-left",
-                        },
-                      },
-                      [
-                        _c("span", { staticClass: "badge btn-action" }, [
-                          _vm._v(
-                            _vm._s(
-                              _vm._f("truncate")(
-                                randomgame.categories,
-                                13,
-                                "..."
-                              )
-                            )
-                          ),
-                        ]),
-                        _c("img", {
-                          staticClass: "imgsearch",
+                  _c(
+                    "div",
+                    { staticClass: "card my-3 bg-transparent imgsearch" },
+                    [
+                      _c(
+                        "a",
+                        {
                           attrs: {
-                            src: "" + randomgame.img_url,
-                            alt: "Couverture du jeux",
+                            href: "/show/" + randomgame.id,
+                            "data-aos": "fade-left",
                           },
-                        }),
-                      ]
-                    ),
-                  ]),
+                        },
+                        [
+                          _c("span", { staticClass: "badge btn-action" }, [
+                            _vm._v(
+                              _vm._s(
+                                _vm._f("truncate")(
+                                  randomgame.categories,
+                                  13,
+                                  "..."
+                                )
+                              )
+                            ),
+                          ]),
+                          _c("img", {
+                            staticClass: "imgSearchimg",
+                            attrs: {
+                              src: "" + randomgame.img_url,
+                              alt: "Couverture du jeux",
+                            },
+                          }),
+                        ]
+                      ),
+                    ]
+                  ),
                 ]
               )
             }),

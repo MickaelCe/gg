@@ -47,6 +47,10 @@ body{
 .imgsearch:hover{
     transform: scale(1.02);
 }
+.imgSearchimg{
+    width: 100%;
+    border-radius: 5px;
+}
 
 
 .content{
