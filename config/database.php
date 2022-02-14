@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Str;
 
-
-
 return [
 
     /*
@@ -18,8 +16,6 @@ return [
     */
 
     'default' => env('DB_CONNECTION', 'mysql'),
-
-    
 
     /*
     |--------------------------------------------------------------------------
