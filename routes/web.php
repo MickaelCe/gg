@@ -30,4 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::get('favorite', [\App\Http\Controllers\FavoriteController::class, 'index'])->name('favorite');
     Route::post('favorite/store', [\App\Http\Controllers\FavoriteController::class, 'store'])->name('store');
     Route::delete('favorite/destroy/{id}', [\App\Http\Controllers\FavoriteController::class, 'destroy'])->name('destroy');
+    Route::get('/linkstorage', function () {
+        Artisan::call('storage:link');
+    });
 });
