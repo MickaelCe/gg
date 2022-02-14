@@ -50,7 +50,7 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => $DATABASE_URL['host'],
+            'host' => $DATABASE_URL['hosts'],
             'port' => $DATABASE_URL['port'],
             'database' => ltrim($DATABASE_URL['path'],'/'),
             'username' => $DATABASE_URL['username'],
