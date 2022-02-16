@@ -9,7 +9,7 @@
 body{
     background-image: url("../images/bg_mobile.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 .content-wrapper, footer{
